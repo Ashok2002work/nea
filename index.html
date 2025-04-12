@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nea</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      
+    </div>
+  </header>
+  
+  <section class="memories-quote" data-aos="fade-up" data-aos-delay="300">
+    <h1 data-aos="zoom-in">@Nea 💖</h1>
+    <p>✨ <span class="fancy-word">Memories</span> ✨</p>
+  </section>
+
+  <section class="gallery-section">
+    <h2 class="gallery-title">Pretty frames</h2>
+    <div class="gallery">
+      <div class="photo-card" data-aos="fade-up"><img src="images/img1.png" alt="Neha 1"></div>
+      <div class="photo-card" data-aos="fade-up"><img src="images/imgpic.png" alt="Neha 1"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="100"><img src="images/img2.png" alt="Neha 2"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img3.jpeg" alt="Neha 3"></div>
+    </div>
+  </section>
+  
+  <section class="gallery-section">
+    
+    <div class="gallery">
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img4.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img5.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img6.jpeg" alt="Neha 3"></div>
+      <div class="photo-card tall" data-aos="fade-up" data-aos-delay="200"><img src="images/img7.jpeg" alt="Neha 3"></div>
+    </div>
+  </section>
+  
+  <section class="gallery-section">
+    
+    <div class="gallery">
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img8.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img9.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img10.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img11.jpeg" alt="Neha 3"></div>
+    </div>
+  </section>
+  
+  <section class="gallery-section">
+    <div class="gallery">
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img12.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img13.jpeg" alt="Neha 3"></div>
+      <div class="photo-card" data-aos="fade-up" data-aos-delay="200"><img src="images/img14.jpeg" alt="Neha 3"></div>
+    </div>
+  </section>
+  
+  
+
+  <div class="flower-zone">
+    <section class="quote" data-aos="fade-in">
+      <p>“To the prettiest and sweetest person”</p>
+    </section>
+  
+    <section class="flower-section">
+      <h2> I know you like flowers 🌸</h2>
+      <div class="flowers">
+        <span>🌷</span>
+        <span>🌼</span>
+        <span>🌸</span>
+        <span>💐</span>
+        <span>🌹</span>
+        <span>🌺</span>
+        <span>🌻</span>
+      </div>
+    </section>
+  
+    <section class="iloveyou" data-aos="zoom-in">
+      <h2>To the cutest❤️</h2>
+    </section>
+  
+    <footer>
+      <p>@Neha Anil💘</p>
+      <p class="from-ashok">From Ashok</p>
+    </footer>
+  
+    
+    <div id="petal-container"></div>
+  </div>
+  
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+<script>
+  const container = document.getElementById('petal-container');
+
+  function createPetal() {
+    const petal = document.createElement('div');
+    petal.classList.add('petal');
+    petal.innerText = ['🌸','🌷','🌺','🌼','💐'][Math.floor(Math.random() * 5)];
+
+    petal.style.left = Math.random() * 100 + 'vw';
+    petal.style.animationDuration = (Math.random() * 5 + 5) + 's'; // 5-10s
+    petal.style.fontSize = Math.random() * 10 + 20 + 'px';
+
+    container.appendChild(petal);
+
+    setTimeout(() => {
+      petal.remove();
+    }, 10000);
+  }
+
+  setInterval(createPetal, 400);
+</script>
+</body>
+</html>
